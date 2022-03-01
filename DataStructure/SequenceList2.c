@@ -25,6 +25,19 @@ void IncreaseList(struct SequenceList L,int len){
     L.maxSize = len + InitSize;
     free(p);
 }
+//顺序表的查找：1、按位查找；2、按值查找
+int getElem(struct SequenceList L,int i){
+    return L.data[i-1];
+}
+int locateElem(struct SequenceList L,int num){
+    for(int j=0;j<L.length;j++){
+        if(L.data[j]==num){
+            return j+1;
+        }
+    }
+    return 0;
+}
+
 int main(void){
     struct SequenceList sqlist;
     InitList(sqlist);
