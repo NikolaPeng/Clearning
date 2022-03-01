@@ -28,10 +28,7 @@ void IncreaseList(struct SequenceList L,int num){
 int main(void){
     struct SequenceList sqlist;
     InitList(sqlist);
-
     IncreaseList(sqlist, 5);
-    for(int i=0;i<sqlist.maxSize;i++){
-        printf("%d, ",sqlist.data[i]);
-    }
+    
     return 0;
 }
