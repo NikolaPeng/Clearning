@@ -39,12 +39,13 @@ bool push(sqstack s,int x){
 }
 
 //出栈操作
-bool pop(sqstack s,int x){
+int pop(sqstack s){
     if(s.top == -1)
         return false;
+    int x;
     x = s.data[s.top]; //将栈顶元素值赋给x
     s.top = s.top - 1;
-    return true;
+    return x;
 }
 
 //读取栈顶元素
