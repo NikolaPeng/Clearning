@@ -29,7 +29,12 @@ bool InitLinkQueue2(LinkQueue q){
 }
 
 //判断队列是否为空：头节点和尾节点是否指向同一个位置
-
+bool LQueueIsEmpty(LinkQueue q){
+    if(q.front == q.rear)
+        return true;
+    else
+        return false;
+}
 //入队（带头节点）
 bool EnLinkQueue1(LinkQueue q,int x){
     LinkNode *s;
@@ -57,8 +62,7 @@ bool EnLinkQueue2(LinkQueue q,int x){
 }
 
 //出队（带头节点）
-bool DeLinkQueue1(LinkQueue q){
-    int x;
+bool DeLinkQueue1(LinkQueue q,int x){
     if(q.front == q.rear)
         return false;
     LinkNode *p = q.front->next;
